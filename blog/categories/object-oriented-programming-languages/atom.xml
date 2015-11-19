@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Object Oriented Programming Languages | My Notebook]]></title>
+  <link href="http://yoursite.com/blog/categories/object-oriented-programming-languages/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
+  <updated>2015-10-31T22:27:14+05:30</updated>
+  <id>http://yoursite.com/</id>
+  <author>
+    <name><![CDATA[Debabrata Tripathy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Object Oriented Programming in Python]]></title>
+    <link href="http://yoursite.com/blog/2014/04/23/object-oriented-programming-in-python/"/>
+    <updated>2014-04-23T10:07:11+05:30</updated>
+    <id>http://yoursite.com/blog/2014/04/23/object-oriented-programming-in-python</id>
+    <content type="html"><![CDATA[<p>To Study any object oriented programming language, that may be dynamic type language like python, ruby or static
+ type language like c++,java one has to learn/ask the following questions? If you are able to answer these
+ questions, then I think you can write object oriented programming in any programming language obviously that
+ should support the object oriented features. The questions are :-</p>
+
+<ul>
+<li>How to create a class with the specific properties
+
+<ul>
+<li>Constructor</li>
+<li>Destructor</li>
+<li>Public, Private or Protected accee speicifer using instance method and properties</li>
+<li>Static instance or properties</li>
+</ul>
+</li>
+<li>How to cretae a Object</li>
+<li>Inheritance</li>
+<li>Multiple Inheritance</li>
+<li>Method overloading and method overridding</li>
+<li>Special method of a class (Default base class and their inheritated method)</li>
+<li>Operator Overloading</li>
+</ul>
+
+
+<h3>How to create a class with the specific properties</h3>
+
+<p>Let&rsquo;s see a example of a class in python -</p>
+
+<pre><code class="python">
+'''
+1. If the name of a Python function, class method, or attribute starts with 
+(but doesn't end with) two underscores, It's private; everything else is public. 
+Python has no concept of protected class methods (accessible only in their
+own class and descendant classes). Class methods are either 
+private (accessible only in their own class) or public (accessible from anywhere).
+
+'''
+class Employee:
+   empCount = 0 ## public static variable
+   __empC = 0   ## private static varibale
+
+   ## constructor
+   def __init__(self, name, salary):
+      self.name = name
+      self.salary = salary ## public state variable
+      self.__privateField = 4 ##private state variable
+      Employee.empCount += 1
+
+   ## public instance method
+   def displayCount(self):
+     print "Total Employee %d" % Employee.empCount
+
+   ## public instance method
+   def displayEmployee(self):
+      print "Name : ", self.name,  ", Salary: ", self.salary
+
+   ## private instance method
+   def __private():
+      print "private method is called"
+
+   ## private static method
+   @staticmethod
+   def __static_method():
+      print "I am a private static mehtod"
+
+   ## public static method
+   @staticmethod
+   def static_method():
+      print "I am a public static mehtod"
+
+   ## destructor
+   def __del__(self):
+      print "I am dieing"
+</code></pre>
+
+<h3>How to cretae a Object</h3>
+
+<p>How to create the object and access the various properties and method
+in python. we can undestand by using below example and I used the previous class
+as base</p>
+
+<pre><code class="python">
+emp =  Employee("XYZ",321) ## creating object in python
+print emp.salary ## accessing public instance variable
+print Employee.empCount ## accessing public static variable
+print Employee.static_method() ## accessing public static method
+print emp.displayEmployee() ## accessing public instance method 
+print emp.__private() ## Accessing private  method, we get AttributeError
+</code></pre>
+
+<h3>Inheritance</h3>
+
+<h3>Multiple Inheritance</h3>
+
+<h3>Method overloading and method overridding</h3>
+
+<h3>Special method of a class</h3>
+
+<h3>Operator Overloading</h3>
+]]></content>
+  </entry>
+  
+</feed>

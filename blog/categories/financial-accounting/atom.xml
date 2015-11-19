@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Financial Accounting | My Notebook]]></title>
+  <link href="http://yoursite.com/blog/categories/financial-accounting/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
+  <updated>2015-10-31T22:27:14+05:30</updated>
+  <id>http://yoursite.com/</id>
+  <author>
+    <name><![CDATA[Debabrata Tripathy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Fundamental of Financial Accounting]]></title>
+    <link href="http://yoursite.com/blog/2015/10/30/fundamental-of-financial-accounting/"/>
+    <updated>2015-10-30T00:16:15+05:30</updated>
+    <id>http://yoursite.com/blog/2015/10/30/fundamental-of-financial-accounting</id>
+    <content type="html"><![CDATA[<h4>Lecture:1</h4>
+
+<hr />
+
+<ul>
+<li><code>Link:</code> <a href="https://www.youtube.com/watch?v=UC0gYlOmIFM">ECON 125 | Lecture 18: C.J. Skender - Accounting (Part 1)</a></li>
+<li><p><code>Professor:</code> C.J. Skender</p></li>
+<li><p><a href="https://en.wikipedia.org/wiki/Luca_Pacioli">Luca Pacioli</a></p></li>
+<li><p><code>FASB:</code> Makes Accounting Rule</p></li>
+<li><p><code>SEC:</code> Congressional power</p></li>
+<li><p><code>Financial Statement:</code> Income statement, Balance Sheet, Cash Flow, Statement of owners equity</p></li>
+<li><code>Revenue(R):</code> An Increase/Inflow of net assets from providing goods and/or services</li>
+<li><code>Expenses(E):</code> An Outflow/Decrease of net assets from providing goods and/or services</li>
+<li><code>Net Asset(NA/OE):</code> Total Asset - Total Liability</li>
+<li><code>Taxes:</code> make the good time not as good and the bad time not as bad</li>
+<li><code>Asset(A):</code> Economic resources</li>
+<li><code>Liability(L):</code> creditors claims</li>
+<li><code>Owners Equity(OE):</code> Owners claims</li>
+<li><p><code>Business Types:</code> Propriety(one many army), partnership(two or more), corporation</p></li>
+<li><p><code>Income statement:</code> Net Income(NI) =  R - E</p></li>
+<li><code>Balance Sheet:</code> A = L + OE</li>
+<li><code>Cash Flow:</code> changes of cash</li>
+<li><p><code>Statement of owners equity:</code> changes of owners equity</p></li>
+<li><p><code>Balance Sheet Account(Real Account):</code> Liability, Asset, Ones Equity</p></li>
+<li><code>Temporary Account:</code>  Revenue and Expense</li>
+</ul>
+
+
+<p><code>Asset = Liability + Contribute Capital(CC) + Retained Earning(RE)</code></p>
+
+<ul>
+<li><p><code>current assets:</code> cash and other assets that are expected to be converted to cash within a year.</p></li>
+<li><p><code>current liability:</code> is an obligation that is 1) due within one year of the date of a company&rsquo;s balance sheet and 2) will require the use of acurrent asset or will create another current liability.</p></li>
+<li><p><code>Working Capital:</code> is a measure of both a company&rsquo;s efficiency and its short-term financial health. Working capital is calculated as:</p></li>
+</ul>
+
+
+<p><code>Working Capital = Current Assets - Current Liabilities</code></p>
+
+<h4>T Account</h4>
+
+<hr />
+
+<p><img src="/images/T_Account.001.png" /></p>
+
+<p><code>Notes:</code> Awesome problem set is discussed on the referred lecture.</p>
+
+<h4><a href="https://en.wikipedia.org/wiki/Chart_of_accounts">Chart of accounts</a></h4>
+
+<hr />
+
+<p>A <code>deferred expense</code> is a cost that has already been incurred, but which has not yet been consumed. The cost is recorded as an asset until such time as the underlying goods or services are consumed; at that point, the cost is charged to expense.</p>
+
+<p><code>What is the difference between a deferred expense and a prepaid expense?</code></p>
+
+<p>Often the term deferred expense indicates that a payment was made more than one year before the cost is expensed. This deferred expense will be reported on the balance sheet as a noncurrent or long-term asset.</p>
+
+<p>Often the term prepaid expense indicates that a payment was made less than one year before the cost is expensed.  This prepaid expense is reported as a current asset.</p>
+
+<h4>Lecture:2</h4>
+
+<hr />
+
+<ul>
+<li><code>Link:</code> <a href="https://www.youtube.com/watch?v=47YiJhiD9yc">ECON 125 | Lecture 22: C.J. Skender - Accounting (Part 2)</a></li>
+<li><code>Professor:</code> C.J. Skender</li>
+</ul>
+
+
+<p><code>Journal entry:</code> A journal entry, in accounting, is a logging of transactions into accounting journal items. The journal entry can consist of several recordings, each of which is either a debit or a credit. The total of the debits must equal the total of the credits or the journal entry is said to be &ldquo;unbalanced&rdquo;. Journal entries can record unique items or recurring items such as depreciation or bond amortization.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Special_journals">Special journals entry</a></p>
+
+<p><code>Subledger:</code> The subledger, or subsidiary ledger, provides details behind entries in the general ledger used in accounting.</p>
+
+<p><code>General ledger:</code> A general ledger contains all the accounts for recording transactions relating to a company&rsquo;s assets, liabilities, owners' equity, revenue, and expenses</p>
+
+<p><code>Trial balance:</code> A trial balance is a list of all the general ledger accounts (both revenue and capital) contained in the ledger of a business. The name comes from the purpose of a trial balance which is to prove that the value of all the debit value balances equal the total of all the credit value balances.</p>
+
+<p><code>journal -----(posting)----&gt; general ledger--------------------&gt;Trial balance</code></p>
+
+<p><code>Asset Capitalization:</code> Definition of &lsquo;Capitalize&rsquo; An accounting method used to delay the recognition of expenses by recording the expense as long-term assets. In general, capitalizing expenses is beneficial as companies acquiring new assets with a long-term lifespan can spread out the cost over a specified period of time.</p>
+
+<h4>Awesome Books and References:</h4>
+
+<hr />
+
+<ul>
+<li><a href="http://ncert.nic.in/ncerts/textbook/textbook.htm?keac1=0-8">Accounting Books By NCERT</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

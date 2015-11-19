@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Efficient Data Searching - My Notebook</title>
+  <meta name="author" content="Debabrata Tripathy">
+
+  
+  <meta name="description" content="We use different technique to search data from our day to day life. Such as, while we are reading a book and we needed a particulr concept again and &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://yoursite.com/blog/2015/08/08/index-in-database/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="" rel="alternate" title="My Notebook" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body    class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Notebook</a></h1>
+  
+    <h2>Pursuit of Clarity.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><!-- <ul class="subscription" data-subscription="rss">
+  <li><a href="" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul> -->
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/reading-list">Reading List</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Efficient Data Searching</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-08-08T12:03:41+05:30'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>12:03 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>We use different technique to search data from our day to day life. Such as, while we are reading a book and we needed a particulr concept again and again, then we might search the concept either of the following list or some creativity searching criteria:-</p>
+
+<ul>
+<li><p>If we know the concept present in particulr page, then access it directly. Here we index: concept-page number (page number is obiviously physical address!!). Here index is of type:- application level index.</p></li>
+<li><p>To access page number we need 3-10 flip. To minimize the flip we can add a marker, so that we can access it in more faster. Here the index is page number-marker, and the index is of physical level index!!</p></li>
+<li><p>We can make a xerox copy of the concept. Here The latency time to search the concept is comparatively smaller than the physical book(It depends where we keep the xerox copy) and same for access time. These concept are related to caching/buffering.</p></li>
+</ul>
+
+
+<p>So to optimize for efficient access the data, we might need to understand physical representation of data, index used either in physical level or logical level, caching/buffering strategy, and most importatnly the context where we access data. So I will go through in following order:-</p>
+
+<ul>
+<li>Phycsical Representation of Data</li>
+<li>Index Structure</li>
+<li>Buffering Strategy</li>
+</ul>
+
+
+<h2>Phycsical Representation of Data</h2>
+
+<h3>Hard disk Structure</h3>
+
+<p><img src="/images/harddisk_structure.png" /></p>
+
+<p>From hardware arhitecture of hard disk perspective, it is made up of sector, cylinder, and track. The basic building block of hard disk is sector. To make interaction or communication with hard disk, we need a address mechanism from differnt perspective such as sector number. Some of the addressing mechanism are: <a href="https://en.wikipedia.org/wiki/Cylinder-head-sector">Cylinder-head-sector</a>, <a href="https://en.wikipedia.org/wiki/Logical_block_addressing">Logical Block Addressing</a>. It is the Disk Controller or Disk Driver which abstract way all the complexity and provide a nice intrface to inteact with hard disk wuch as <a href="https://en.wikipedia.org/wiki/Serial_ATA">Serial ATA</a>, and it address the memory with logical block. The interface looks like:-</p>
+
+<ul>
+<li>read(address) :- retrun a block of data</li>
+<li>write(address, data) : It write the data in given address from starting position</li>
+</ul>
+
+
+<p>We know about file system which operating system provided to abstract way all the complexity of disk driver interfce. So it make a abstraction called file system(database) to manage your file from different perspective what we think a file at present moment. To read about file system from operating system perspective the following resoureces I used to refer:-</p>
+
+<h5>Emphasis on Storage</h5>
+
+<ul>
+<li><a href="http://nptel.ac.in/courses/106108058/">Storage Sysetem NPTEL</a></li>
+<li><a href="http://www.nobius.org/~dbg/">Practical File System Design</a></li>
+<li><a href="http://www.cs.uofs.edu/~mccloske/courses/cmps340/RAID_lec.html">RAID</a></li>
+<li><a href="http://web.cs.wpi.edu/~cs4513/b05/">CS4513 Distributed Computing Systems</a></li>
+</ul>
+
+
+<h5>Project</h5>
+
+<ul>
+<li><a href="https://web.stanford.edu/class/cs346/2015/">RedBase</a></li>
+<li><a href="http://ori.scs.stanford.edu/">Ori A Secure Distributed File System</a></li>
+</ul>
+
+
+<h5>Theory about Implementation:</h5>
+
+<ul>
+<li><a href="http://people.csail.mit.edu/rinard/osnotes/">Operating Systems Lecture Notes</a></li>
+<li><a href="http://pdos.csail.mit.edu/6.828/2012/reference.html">6.828-MIT</a></li>
+<li><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/">Operating Systems: Three Easy Pieces</a></li>
+<li><a href="http://redbook.cs.berkeley.edu/redbook3/lecs.html">Readings in Database Systems</a></li>
+<li><a href="https://github.com/rxin/db-readings">Database Reading List</a></li>
+<li><a href="http://www.cs286.net/home/reading-list">http://www.cs286.net/home/reading-list</a></li>
+</ul>
+
+
+<h3>Index Structure</h3>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Debabrata Tripathy</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2015-08-08T12:03:41+05:30'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>12:03 pm</span></time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://yoursite.com/blog/2015/08/08/index-in-database/" data-via="" data-counturl="http://yoursite.com/blog/2015/08/08/index-in-database/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/04/26/video-lecture-for-learning-python/" title="Previous Post: Video Lecture for learning Python">&laquo; Video Lecture for learning Python</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2015/08/30/mathematics-1/" title="Next Post: Mathematics-1">Mathematics-1 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Debabrata Tripathy -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

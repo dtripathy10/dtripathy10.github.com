@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Enterprise Software Architecture | My Notebook]]></title>
+  <link href="http://yoursite.com/blog/categories/enterprise-software-architecture/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
+  <updated>2015-10-31T22:27:14+05:30</updated>
+  <id>http://yoursite.com/</id>
+  <author>
+    <name><![CDATA[Debabrata Tripathy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Analysis Patterns: Reusable Object Models]]></title>
+    <link href="http://yoursite.com/blog/2015/10/26/analysis-patterns-reusable-object-models/"/>
+    <updated>2015-10-26T23:52:41+05:30</updated>
+    <id>http://yoursite.com/blog/2015/10/26/analysis-patterns-reusable-object-models</id>
+    <content type="html"><![CDATA[<h3>About</h3>
+
+<hr />
+
+<ul>
+<li>Author : <a href="http://martinfowler.com/">Martin Fowler</a></li>
+<li>Review : <a href="http://www.amazon.in/Analysis-Patterns-Reusable-Object-Models/dp/0201895420">Amazon</a></li>
+</ul>
+
+
+<h3>Notes</h3>
+
+<hr />
+
+<ul>
+<li>Accountability : Patterns for describing relationships that define responsibilities between parties.</li>
+<li>Observation and Measurment : Patterns for recording facts.</li>
+<li>Referring to Objects: Patterns of indexing to refer exactly to objects.</li>
+<li>Observations for Corporate Finance: Enterprise Segment</li>
+<li>Inventory and Accounting: Basic patterns for accounting, describing how a network of accounts can form an
+active accounting system.</li>
+<li>Planning: Patterns depicting the relationship between standard plans and one-off plans, and how to plan and record the use of resources.</li>
+<li>Trading: Patterns focusing on tradding in situations where prices are fluid and we need to understand how these price changes affect the profits</li>
+</ul>
+
+
+<h3>More Resouces:</h3>
+
+<hr />
+
+<ul>
+<li><a href="http://martinfowler.com/tags/analysis%20patterns.html">analysis patterns - Martin Fowler</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Implementing Domain Driven Design]]></title>
+    <link href="http://yoursite.com/blog/2015/10/25/implementing-domain-driven-design/"/>
+    <updated>2015-10-25T15:06:06+05:30</updated>
+    <id>http://yoursite.com/blog/2015/10/25/implementing-domain-driven-design</id>
+    <content type="html"><![CDATA[<h3>About</h3>
+
+<hr />
+
+<ul>
+<li>Author : <a href="https://vaughnvernon.co/">Vaughn Vernon</a></li>
+<li>Review : <a href="http://www.amazon.in/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577">Amazon</a></li>
+</ul>
+
+
+<h3>Notes</h3>
+
+<hr />
+
+<ul>
+<li>Architecture: Hexagonal or Port and Adapters, CQRS, Event Driven Architecture, Pipes and Filters, Long Running Process aks Sagas,</li>
+<li>Implementation pattern using java for entity, value object, domain service, aggregate, factory, repository, domain event, transaction,
+event sourcing, consistency of aggragate, application service, infrastructure service, interaction among bounded constext either synchronously or asynchronously.</li>
+</ul>
+
+
+<h3>More Resouces:</h3>
+
+<hr />
+
+<ul>
+<li><a href="https://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html">The Clean Architecture</a></li>
+<li><a href="https://www.youtube.com/watch?v=Nsjsiz2A9mg">Robert C Martin - Clean Architecture and Design</a></li>
+<li><a href="http://www.servicedesignpatterns.com/">Service Design Patterns</a></li>
+<li><a href="https://dzone.com/articles/technical-job-interview">Technical Job Interview Questions for Java EE architects</a></li>
+<li><a href="http://arnauld.github.io/blog/2011/12/10/Technical-Job-Interview-Questions-for-Java-EE-architects.html#modelling">Technical Job Interview Questions for Java EE architects</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Domain Driven Design - Tackling Complexity in the Heart of Software]]></title>
+    <link href="http://yoursite.com/blog/2015/10/25/domain-driven-design-tackling-complexity-in-the-heart-of-software/"/>
+    <updated>2015-10-25T05:53:14+05:30</updated>
+    <id>http://yoursite.com/blog/2015/10/25/domain-driven-design-tackling-complexity-in-the-heart-of-software</id>
+    <content type="html"><![CDATA[<h3>About</h3>
+
+<hr />
+
+<ul>
+<li>Author : <a href="https://domainlanguage.com/">Eric Evans</a></li>
+<li>Review : <a href="http://www.amazon.in/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1445764127&amp;sr=1-1&amp;keywords=Domain-Driven+Design%3A+Tackling+Complexity+in+the+Heart+of+Software">Amazon</a></li>
+</ul>
+
+
+<h3>Notes</h3>
+
+<hr />
+
+<h5>Putting the Domain Model to Work</h5>
+
+<ul>
+<li>Brainstorming/Knowledge Crunching session: To find a simple model for tackle the complexity</li>
+<li>Ubiquitous Language: for collaboration</li>
+<li>Hands-On Modellers: Binding model and implementation</li>
+<li>Technology Agnostic Architecture</li>
+</ul>
+
+
+<h5>The Building Blocks of a Model-Driven Design</h5>
+
+<ul>
+<li>Smart UI Anti pattern</li>
+<li>Architecture Concerned: Layered Architecture, Hexagonal Architecture</li>
+<li>Domain Model Architecture: Entity, Value Object, Service, Modules</li>
+<li>Managing Lifecycle of Domain Object: Aggregate(Ownership), Factory, Repository</li>
+<li>Aggregate has the right to query the repository, and factory has the right to create a domain object by using Repository</li>
+<li>Separate Domain Model and database schema</li>
+<li>Separate artifacts for bounded context including database schema</li>
+</ul>
+
+
+<h4>Refactoring towards Deeper Insight</h4>
+
+<ul>
+<li>Contineous Learning: Improve the Ubiquitous Language</li>
+<li>Refactoring towards deeper insight</li>
+<li>Supple Design</li>
+</ul>
+
+
+<h4>Strategic Design</h4>
+
+<ul>
+<li>Bounded Context</li>
+<li>BC leads to Integration Problem -> Contineous Integration</li>
+<li>Comunication between BC</li>
+<li>Context Map</li>
+</ul>
+
+
+<h4>Further Design Pattern</h4>
+
+<ul>
+<li>Aspect-oriented programming</li>
+<li>Command Query Responsibility Segregation</li>
+<li>Event Sourcing (Accounting Entry )</li>
+</ul>
+
+
+<h3>More Resouces:</h3>
+
+<hr />
+
+<ul>
+<li><a href="http://domainlanguage.com/ddd/strategy/GettingStartedWithDDDWhenSurroundedByLegacySystemsV1.pdf">Getting Started With DDD When Surrounded By Legacy Systems</a></li>
+<li><a href="https://www.youtube.com/watch?v=lE6Hxz4yomA">What I&rsquo;ve learned about DDD since the book (London-2009)</a></li>
+<li><a href="https://www.youtube.com/watch?v=f00jUC64osw">Design and Agile in DDD (NYC-2010)</a></li>
+<li><a href="http://martinfowler.com/eaaDev/">Development of Further Patterns of Enterprise Application Architecture</a></li>
+<li><a href="http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/">CQRS, Task Based UIs, Event Sourcing agh!</a></li>
+<li><a href="https://msdn.microsoft.com/en-us/library/jj554200.aspx">CQRS Journey - Microsoft</a></li>
+<li><a href="http://martinfowler.com/tags/domain%20driven%20design.html">domain driven design</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

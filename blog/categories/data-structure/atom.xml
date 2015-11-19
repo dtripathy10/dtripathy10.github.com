@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Data Structure | My Notebook]]></title>
+  <link href="http://yoursite.com/blog/categories/data-structure/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
+  <updated>2015-10-31T22:27:14+05:30</updated>
+  <id>http://yoursite.com/</id>
+  <author>
+    <name><![CDATA[Debabrata Tripathy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Data Structure in Python]]></title>
+    <link href="http://yoursite.com/blog/2014/04/25/data-structure-in-python/"/>
+    <updated>2014-04-25T16:08:47+05:30</updated>
+    <id>http://yoursite.com/blog/2014/04/25/data-structure-in-python</id>
+    <content type="html"><![CDATA[<h3>Reference</h3>
+
+<ul>
+<li><a href="https://developers.google.com/edu/python/strings">https://developers.google.com/edu/python/strings</a></li>
+<li><a href="https://developers.google.com/edu/python/lists">https://developers.google.com/edu/python/lists</a></li>
+<li><a href="https://developers.google.com/edu/python/sorting">https://developers.google.com/edu/python/sorting</a></li>
+<li><a href="https://developers.google.com/edu/python/dict-files">https://developers.google.com/edu/python/dict-files</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

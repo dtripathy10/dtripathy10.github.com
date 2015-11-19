@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Regular Expression | My Notebook]]></title>
+  <link href="http://yoursite.com/blog/categories/regular-expression/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
+  <updated>2015-10-31T22:27:14+05:30</updated>
+  <id>http://yoursite.com/</id>
+  <author>
+    <name><![CDATA[Debabrata Tripathy]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Regular Expression in Python]]></title>
+    <link href="http://yoursite.com/blog/2014/04/25/regular-expression-in-python/"/>
+    <updated>2014-04-25T15:48:08+05:30</updated>
+    <id>http://yoursite.com/blog/2014/04/25/regular-expression-in-python</id>
+    <content type="html"><![CDATA[<h3>Reference</h3>
+
+<ul>
+<li><a href="https://developers.google.com/edu/python/regular-expressions">https://developers.google.com/edu/python/regular-expressions</a></li>
+<li><a href="http://www.tutorialspoint.com/python/python_reg_expressions.htm">http://www.tutorialspoint.com/python/python_reg_expressions.htm</a></li>
+<li><a href="https://pythex.org/">https://pythex.org/</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
